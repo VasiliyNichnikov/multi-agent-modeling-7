@@ -102,7 +102,7 @@ class Config:
         self.__general_messages = GeneralMessages(data["commands"]["general"]["messages"])
         self.__data_writer_messages = DataWriterMessages(data["commands"]["datawriter"]["messages"])
         self.__error_messages = ErrorMessages(data["commands"]["error"]["messages"])
-        self.__data_output_message = DataOutputMessages(data["commands"]["dataoutput"]["messages"])
+        self.__data_output_messages = DataOutputMessages(data["commands"]["dataoutput"]["messages"])
 
     @property
     def keyboard_names(self) -> KeyboardNames:
@@ -121,8 +121,8 @@ class Config:
         return self.__error_messages
 
     @property
-    def data_output_message(self) -> DataOutputMessages:
-        return self.__data_output_message
+    def data_output_messages(self) -> DataOutputMessages:
+        return self.__data_output_messages
 
 
 __factory = None
